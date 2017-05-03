@@ -1,0 +1,78 @@
+.body{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .9;
+}
+
+body{
+  background-image: url('http://wallpapercave.com/wp/6wjqYQ8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul{
+  list-style-position: inside;
+
+}
+
+#def_list{
+
+
+}
+
+.lead{
+  text-align: center;
+}
+
+.searched{
+  text-align: center;
+}
+
+.center_print{
+  text-align: center;
+}
+
+
+
+#word_name{
+  color: green;
+}
+
+.definitions{
+  text-align: center;
+}
+
+.definitions ul{
+  display: inline-block;
+  text-align: left;
+}
+
+.example_list{
+  text-align: center;
+}
+
+.example_list ul{
+  display: inline-block;
+  text-align: left;
+}
+
+.jumbotron-fluid{
+  text-align: center;
+}
+
+.basic{
+  color: green;
+}
+
+#search_button{
+  background-color: green;
+}
+
+.example_list{
+
+}
+
+#word_result{
+  color: green;
+}

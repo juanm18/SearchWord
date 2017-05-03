@@ -1,0 +1,60 @@
+{% extends "my_app/main.html" %}
+{%load staticfiles%}
+{%block content%}
+<br>
+<div class="jumbotron">
+  <div class="searched">
+    <h1 id="word_result" class="display-3">You Searched the Word: {{search_word}}</h1>
+  </div>
+  <div class="center_print">
+    <p>
+      {% for e in errors %}
+      <h2>{{e}}</h2>
+      {%endfor%}
+    </p>
+  </div>
+  <div class="center_print">
+    <h2>{{pronunciation}}</h2>
+    <br>
+    <h2>{{types}}</h2>
+    <br>
+  </div>
+  <div id="def_list">
+  <p class="lead">
+    {%if not errors%}
+      <h3 class="center_print">Definitions:</h3>
+  <div class="definitions">
+    <ul>
+      {%for r in resp %}
+        {% for s in r.lexicalEntries%}
+          {%for i in s.entries  %}
+              {% for h in i.senses  %}
+                {% for v in h.definitions  %}
+                  <li>{{v}}</li>
+              {%endfor%}
+            {%endfor%}
+          {%endfor%}
+        {%endfor%}
+      {%endfor%}
+    </ul>
+  </div>
+  </p>
+  </div>
+  <hr class="my-4">
+  <div class="examples">
+    {% if examples %}
+    <h3 class="center_print">Examples:</h3>
+    {%else%}
+    <h3 class="center_print">No Examples</h3>
+    {% endif %}
+    <div class="example_list">
+    <ul>
+      {% for e in examples %}
+      <li>{{e.text}}</li>
+      {% endfor %}
+    </ul>
+    </div>
+  </div>
+  {%endif%}
+</div>
+{%endblock content%}
