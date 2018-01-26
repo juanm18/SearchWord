@@ -1,3 +1,6 @@
+html{
+  background-color: black;
+}
 .body{
     width: 60%;
     margin-left: auto;
@@ -5,10 +8,11 @@
     opacity: .9;
 }
 
-body{
+.body{
   background-image: url('http://wallpapercave.com/wp/6wjqYQ8.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 ul{

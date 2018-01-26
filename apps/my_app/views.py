@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse,redirect
 import requests
-import simplejson
-import json
+try: import simplejson as json
+except ImportError: import json
 from django.contrib import messages
 from models import *
 from datetime import datetime
